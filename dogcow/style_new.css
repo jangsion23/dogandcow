@@ -1,9 +1,17 @@
-nav {
+header{
+    border-bottom: thick solid #000;
+    padding: 100px;
+    text-align: center;
+}
+nav{
     width:200px;
     height:300px;
     float:left;
 }
-table, th, td { border: 1px solid black }
+body{
+
+}
+table, th, td { border: 1px solid black;}
 .txt_btn{text-align:center;}
 .txt_btn ul{display:inline-block; *display:inline; zoom:1;}
 .txt_btn ul li{float:left; margin-left:-1px; z-index:1;}
