@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8" />
+   <title>TRAVEL DAEGU</title>
+
+   <link rel="stylesheet" type="text/css" href="http://localhost/dogcoww/style.css">
+
+
+<style>
+    table, th, td { border: 1px solid black }
+    .txt_btn{text-align:center;}
+    .txt_btn ul{display:inline-block; *display:inline; zoom:1;}
+    .txt_btn ul li{float:left; margin-left:-1px; z-index:1;}
+
+
+
+</style>
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!DOCTYPE html>
+    <html lang="ko">
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <style>
+        .slidebox{float:left;}
+    </style>
+</head>
+
+
+<body>
+   <header>
+      <h1><strong><a href="http://localhost/dogcoww/index.html">WELCOME TO DAEGU</a></strong></h1>
+      <hr>
+      <h2><div class = "slidebox">
+        
+        <input type = radio name="slide" id="slide01"checked>
+        <input type = radio name="slide" id="slide02">
+        <input type = radio name="slide" id="slide03">
+        <input type = radio name="slide" id="slide04">
+        <ul class = "slidelist">
+            <li class="slideitem">
+                <div>
+                    <label for = "slide04" class=""left></label>
+                    <label for = "slide02" class=""right></label>
+                    <a><img src="./해커톤사진.png"></a>
+                </div>
+            </li>
+            <li class="slideitem">
+                <div>
+                    <label for = "slide01" class=""left></label>
+                    <label for = "slide03" class=""right></label>
+                    <a><img src="./slide02.jpg"></a>
+                </div>
+            </li>
+            <li class="slideitem">
+                <div>
+                    <label for = "slide02" class=""left></label>
+                    <label for = "slide04" class=""right></label>
+                    <a><img src="./slide03.jpg"></a>
+                </div>
+            </li> 
+            <li class="slideitem">
+                <div>
+                    <label for = "slide03" class=""left></label>
+                    <label for = "slide01" class=""right></label>
+                    <a><img src="./slide04.jpg"></a>
+                </div>
+            </li> 
+        </ul>
+    </div>
+    
+
+   
+
+
+</nav>
+
+</body>
