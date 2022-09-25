@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>TRAVEL DAEGU lOGIN</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <html lang="ko">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <style>
+        a:link{color: black; text-decoration: none}
+        @import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Gugi&display=swap');
+        .login-form{
+        width: 700px;
+        float:right;
+        border: 0;
+        border-radius: 10px;
+        background-color: black;
+        padding: 40px;
+        margin: 0 auto;
+        }
+        .font{
+            font-family: 'Bungee Spice', cursive;
+            font-family: 'Gugi', cursive;
+        }
+
+        *{margin:0;padding:0;box-sizing:border-box;}
+        ul,li{list-style:none;}
+
+        [name="slide"]{display:none;}
+        .slidebox {float:left;max-width:1000px;width:100%;margin:0 auto;}
+        .slidebox img{max-width:100%;}
+        .slidebox .slidelist{
+            white-space:nowrap;
+            font-size:0;
+            overflow:hidden;
+        }
+        .slidebox .slideitem{
+            position:relative;
+            display:inline-block;
+            vertical-align:middle;
+            width:100%;
+            transition:all .35s;
+        }
+        .slidebox .slideitem label {
+            position: absolute;
+            z-index: 1;
+            top:50%;
+            transform:translateY(-50%);
+            padding:20px;
+            border-radius:50%;
+            cursor:pointer;
+        }
+
+        label.left{
+            left:20px;
+            background-color: #5F5F5F;
+            background-image: url('./left-arrow.png');
+            background-position:center center;
+            background-size: 50%;
+            background-repeat: no-repeat;
+        }
+        label.right{
+            right:20px;
+            background-color: #5F5F5F;
+            background-image: url('./right-arrow.png');
+            background-position:center center; 
+            background-size: 50%;
+            background-repeat: no-repeat;
+        }
+        [id="slide01"]:checked ~.slidelist .slideitem{transform:translateX(0);animation:slide01 20s infinite;}
+        [id="slide02"]:checked ~.slidelist .slideitem{transform:translateX(-100%);animation:slide02 20s infinite;}
+        [id="slide03"]:checked ~.slidelist .slideitem{transform:translateX(-200%);animation:slide03 20s infinite;}
+        [id="slide04"]:checked ~.slidelist .slideitem{transform:translateX(-300%);animation:slide04 20s infinite;}
+        
+        @keyframes slide01{
+            0%{left:0%;}
+            23%{left:0%;}
+            25%{left:-100%;}
+            48%{left:-100%;}
+            50%{left:-200%;}
+            73%{left:-200%;}
+            75%{left:-300%;}
+            98%{left:-300%;}
+            100%{left:0%;}    
+        }
+        @keyframes slide02{
+            0%{left:0%;}
+            23%{left:0%;}
+            25%{left:-100%;}
+            48%{left:-100%;}
+            50%{left:-200%;}
+            73%{left:-200%;}
+            75%{left:100%;}
+            98%{left:100%;}
+            100%{left:0%;}    
+        }
+        @keyframes slide03{
+            0%{left:0%;}
+            23%{left:0%;}
+            25%{left:-100%;}
+            48%{left:-100%;}
+            50%{left:200%;}
+            73%{left:200%;}
+            75%{left:100%;}
+            98%{left:100%;}
+            100%{left:0%;}    
+        }
+        @keyframes slide04{
+            0%{left:0%;}
+            23%{left:0%;}
+            25%{left:300%;}
+            48%{left:300%;}
+            50%{left:200%;}
+            73%{left:200%;}
+            75%{left:100%;}
+            98%{left:100%;}
+            100%{left:0%;}    
+        }
+    </style>
+</head>
+
+
+<body>
+    <header class="font">
+        <h1 font-size:50px;><strong>WELCOME TO DAEGU</a></strong></h1>
+    </header>
+    <hr>
+    <h2><div class = "slidebox">
+        
+        <input type = radio name="slide" id="slide01"checked>
+        <input type = radio name="slide" id="slide02">
+        <input type = radio name="slide" id="slide03">
+        <input type = radio name="slide" id="slide04">
+        <ul class = "slidelist">
+            <li class="slideitem">
+                <div>
+                    <label for = "slide04" class=""left></label>
+                    <label for = "slide02" class=""right></label>
+                    <a><img src="/KNU.jpg"></a>
+                </div>
+            </li>
+            <li class="slideitem">
+                <div>
+                    <label for = "slide01" class=""left></label>
+                    <label for = "slide03" class=""right></label>
+                    <a><img src="/83타워.jpg"></a>
+                </div>
+            </li>
+            <li class="slideitem">
+                <div>
+                    <label for = "slide02" class=""left></label>
+                    <label for = "slide04" class=""right></label>
+                    <a><img src="/수성못(풍경).jpg"></a>
+                </div>
+            </li> 
+            <li class="slideitem">
+                <div>
+                    <label for = "slide03" class=""left></label>
+                    <label for = "slide01" class=""right></label>
+                    <a><img src="/앞산.jpg"></a>
+                </div>
+            </li> 
+        </ul>
+    </div>
+
+    <div class="login-form">
+        <form>
+            <input type="email" name="email" id = "email" class="text-field" placeholder="아이디">
+            <input type="password" name="password" id = "password" class="text-field" placeholder="비밀번호">
+        </form>
+        <input type="submit" class="submit-btn" id = "login" value="SIGN IN">
+        <input type="button" class="submit-btn" onclick="location.href='index.html' " id ="toregister" value="SIGN UP">
+        
+
+    </div>
+
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyBI_D1dfhqSK4JSqVG-t-uZONj8xFb4bD0",
+          authDomain: "login-a1111.firebaseapp.com",
+          projectId: "login-a1111",
+          storageBucket: "login-a1111.appspot.com",
+          messagingSenderId: "878896122460",
+          appId: "1:878896122460:web:0fff559217b57c9ed1f499",
+          measurementId: "G-4C4BJMNTBB"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+
+        document.getElementById('login').addEventListener('click',(event) => {
+            event.preventDefault()
+            const email = document.getElementById('email').value
+            const password = document.getElementById('password').value
+            const auth = getAuth();
+            signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+             // Signed in
+            const user = userCredential.user;
+            alert('로그인 되었습니다!');
+            location.href="\main.html";
+             // ...
+            })
+            .catch((error) => {
+             const errorCode = error.code;
+             const errorMessage = error.message;
+            });
+    })
+      </script>
+</body>
+</html>
